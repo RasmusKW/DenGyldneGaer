@@ -2,14 +2,14 @@
 <html lang="da">
 <head>
   <meta charset="UTF-8">
-  <title>1. Advent – Brygmesterens Kode</title>
+  <title>1. Advent – Brygmesterens Kode Rød</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="snow"></div>
   <div class="container">
-    <h1>🎄 1. Advent – Brygmesterens Kode 🍒</h1>
-    <p>Indtast de 3 tal du har fundet gennem gåderne.</p>
+    <h1>⭐ 1. Advent ⭐<br>🍒 Brygmesterens Kode Rød 🍒</h1>
+    <p>Du kigger på kodelåsen til den første dør, har du hvad der skal til?</p>
 
     <div class="code-inputs">
       <input type="number" id="digit1" min="0" max="9">
@@ -17,13 +17,13 @@
       <input type="number" id="digit3" min="0" max="9">
     </div>
 
-    <button onclick="checkCode()">Tjek Kode</button>
+    <button class="check-code" onclick="checkCode()">Tjek Kode</button>
     <p id="result"></p>
-    <a href="index.html" class="back">⬅ Tilbage</a>
+    <a href="index.html" class="back">⬅ Tilbage til brygmesterens kælder</a>
   </div>
 
   <script>
-    const correctCode = "472"; // ✨ ændr koden her
+    const correctCode = "472";
 
     function checkCode() {
       const code =
@@ -32,10 +32,10 @@
         document.getElementById("digit3").value;
       const result = document.getElementById("result");
       if (code === correctCode) {
-        result.textContent = "✅ Korrekt! Du har låst op for Cherry Red Risalamande 🍻";
+        result.textContent = "✅ Med et *klik* går låsen op og døren åbner. Bag den står hvad du finder i din pakke 🍚🍒🍻";
         result.className = "success";
       } else {
-        result.textContent = "❌ Forkert kode... måske mangler du en smule julestøv?";
+        result.textContent = "❌ Forkert kode...";
         result.className = "fail";
       }
     }

@@ -8,8 +8,8 @@
 <body>
   <div class="snow"></div>
   <div class="container">
-    <h1>⭐ 4. Advent – Den Gyldne Åbenbaring ✨</h1>
-    <p>Den sidste prøve. Indtast din kode for at afsløre Den Gyldne Gær.</p>
+    <h1>🎅 4. Advent 🎅 <br>✨ Brygmesterens Gyldne <br> Åbenbaring ✨</h1>
+    <p>Du kigger på kodelåsen til den fjerde dør, har du hvad der skal til?</p>
 
     <div class="code-inputs">
       <input type="number" id="digit1" min="0" max="9">
@@ -19,11 +19,11 @@
 
     <button onclick="checkCode()">Tjek Kode</button>
     <p id="result"></p>
-    <a href="index.html" class="back">⬅ Tilbage</a>
+    <a href="index.html" class="back">⬅ Tilbage til brygmesterens kælder</a>
   </div>
 
   <script>
-    const correctCode = "941"; // ✨ ændr koden her
+    const correctCode = "941";
 
     function checkCode() {
       const code =
@@ -32,10 +32,10 @@
         document.getElementById("digit3").value;
       const result = document.getElementById("result");
       if (code === correctCode) {
-        result.innerHTML = "🎉 <b>Korrekt!</b> Du har fundet Den Gyldne Gær 🍺<br><br><a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Åbn hemmeligheden her</a>";
+        result.innerHTML = "🎉 Korrekt! Du har fundet Den Gyldne Gær 🍺";
         result.className = "success";
       } else {
-        result.textContent = "❌ Forkert... gæren nægter stadig at hæve.";
+        result.innerHTML = "❌ Forkert.. <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Få et hint her</a>";
         result.className = "fail";
       }
     }
