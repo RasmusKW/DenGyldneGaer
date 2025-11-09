@@ -1,0 +1,76 @@
+body {
+  background: linear-gradient(180deg, #f4ede1 0%, #fff 100%);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #3a2e1f;
+}
+
+.container {
+  text-align: center;
+  background: #fffdf8;
+  border: 2px solid #d3b673;
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 420px;
+}
+
+h1 { margin-bottom: 1rem; }
+
+.code-inputs input {
+  width: 60px;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.3rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.3rem;
+}
+
+button {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  background: #d3b673;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover { background: #c5a661; }
+
+.success { color: green; font-weight: bold; margin-top: 1rem; }
+.fail { color: crimson; font-weight: bold; margin-top: 1rem; }
+
+.links a {
+  display: block;
+  margin: 0.6rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: #d3b673;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.links a:hover { background: #c5a661; }
+
+.footer {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.back {
+  display: block;
+  margin-top: 1.5rem;
+  color: #666;
+  text-decoration: none;
+}

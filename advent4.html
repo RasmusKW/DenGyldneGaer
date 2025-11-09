@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advent 4 – The Golden Revelation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>⭐ Advent 4 – The Golden Revelation ✨</h1>
+    <p>This is the final test. Enter your final 3-digit code:</p>
+
+    <div class="code-inputs">
+      <input type="number" id="digit1" min="0" max="9">
+      <input type="number" id="digit2" min="0" max="9">
+      <input type="number" id="digit3" min="0" max="9">
+    </div>
+
+    <button onclick="checkCode()">Check Code</button>
+    <p id="result"></p>
+    <a href="index.html" class="back">⬅ Back</a>
+  </div>
+
+  <script>
+    const correctCode = "941"; // ✨ set Advent 4 code here
+
+    function checkCode() {
+      const code =
+        document.getElementById("digit1").value +
+        document.getElementById("digit2").value +
+        document.getElementById("digit3").value;
+      const result = document.getElementById("result");
+      if (code === correctCode) {
+        result.innerHTML = "🎉 <b>Correct!</b> You’ve unlocked <em>The Golden Gær</em> 🍺<br><br> <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Reveal the secret</a>";
+        result.className = "success";
+      } else {
+        result.textContent = "❌ Wrong... the yeast refuses to rise!";
+        result.className = "fail";
+      }
+    }
+  </script>
+</body>
+</html>

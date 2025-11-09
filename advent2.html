@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advent 2 – The Unicorn Cipher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎁 Advent 2 – The Christmas Unicorn 🌲</h1>
+    <p>Enter the 3-digit code you found in your second puzzle.</p>
+
+    <div class="code-inputs">
+      <input type="number" id="digit1" min="0" max="9">
+      <input type="number" id="digit2" min="0" max="9">
+      <input type="number" id="digit3" min="0" max="9">
+    </div>
+
+    <button onclick="checkCode()">Check Code</button>
+    <p id="result"></p>
+    <a href="index.html" class="back">⬅ Back</a>
+  </div>
+
+  <script>
+    const correctCode = "318"; // ✨ set Advent 2 code here
+
+    function checkCode() {
+      const code =
+        document.getElementById("digit1").value +
+        document.getElementById("digit2").value +
+        document.getElementById("digit3").value;
+      const result = document.getElementById("result");
+      if (code === correctCode) {
+        result.textContent = "✅ Correct! The Unicorn grants you permission to drink 🦄🍺";
+        result.className = "success";
+      } else {
+        result.textContent = "❌ Wrong... maybe the hops are hiding something!";
+        result.className = "fail";
+      }
+    }
+  </script>
+</body>
+</html>

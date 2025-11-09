@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advent 3 – The Silent Night Enigma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🕯️ Advent 3 – The Stille Nacht Enigma 🎅</h1>
+    <p>Enter the 3-digit code from your third challenge.</p>
+
+    <div class="code-inputs">
+      <input type="number" id="digit1" min="0" max="9">
+      <input type="number" id="digit2" min="0" max="9">
+      <input type="number" id="digit3" min="0" max="9">
+    </div>
+
+    <button onclick="checkCode()">Check Code</button>
+    <p id="result"></p>
+    <a href="index.html" class="back">⬅ Back</a>
+  </div>
+
+  <script>
+    const correctCode = "506"; // ✨ set Advent 3 code here
+
+    function checkCode() {
+      const code =
+        document.getElementById("digit1").value +
+        document.getElementById("digit2").value +
+        document.getElementById("digit3").value;
+      const result = document.getElementById("result");
+      if (code === correctCode) {
+        result.textContent = "✅ Correct! The night grows silent... open your Stille Nacht 🍻";
+        result.className = "success";
+      } else {
+        result.textContent = "❌ Nope! The bells ring with confusion...";
+        result.className = "fail";
+      }
+    }
+  </script>
+</body>
+</html>
