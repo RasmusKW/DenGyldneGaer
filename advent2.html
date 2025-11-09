@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
-  <title>Advent 2 – The Unicorn Cipher</title>
+  <title>2. Advent – Juleenhjørningens Hemmelighed</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="snow"></div>
   <div class="container">
-    <h1>🎁 Advent 2 – The Christmas Unicorn 🌲</h1>
-    <p>Enter the 3-digit code you found in your second puzzle.</p>
+    <h1>🎁 2. Advent – Juleenhjørningens Hemmelighed 🌲</h1>
+    <p>Indtast din 3-cifrede kode for at låse op for øllen.</p>
 
     <div class="code-inputs">
       <input type="number" id="digit1" min="0" max="9">
@@ -16,13 +17,13 @@
       <input type="number" id="digit3" min="0" max="9">
     </div>
 
-    <button onclick="checkCode()">Check Code</button>
+    <button onclick="checkCode()">Tjek Kode</button>
     <p id="result"></p>
-    <a href="index.html" class="back">⬅ Back</a>
+    <a href="index.html" class="back">⬅ Tilbage</a>
   </div>
 
   <script>
-    const correctCode = "318"; // ✨ set Advent 2 code here
+    const correctCode = "318"; // ✨ ændr koden her
 
     function checkCode() {
       const code =
@@ -31,10 +32,10 @@
         document.getElementById("digit3").value;
       const result = document.getElementById("result");
       if (code === correctCode) {
-        result.textContent = "✅ Correct! The Unicorn grants you permission to drink 🦄🍺";
+        result.textContent = "✅ Korrekt! Enhjørningen nikker anerkendende – du må drikke 🦄🍺";
         result.className = "success";
       } else {
-        result.textContent = "❌ Wrong... maybe the hops are hiding something!";
+        result.textContent = "❌ Nope! Humlen gemmer vist stadig på en hemmelighed...";
         result.className = "fail";
       }
     }

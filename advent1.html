@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
-  <title>Advent 1 – The Cherry Code</title>
+  <title>1. Advent – Brygmesterens Kode</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="snow"></div>
   <div class="container">
-    <h1>🎄 Advent 1 – The Brygmester’s Secret 🍒</h1>
-    <p>Enter the 3-digit code you discovered from your puzzles.</p>
+    <h1>🎄 1. Advent – Brygmesterens Kode 🍒</h1>
+    <p>Indtast de 3 tal du har fundet gennem gåderne.</p>
 
     <div class="code-inputs">
       <input type="number" id="digit1" min="0" max="9">
@@ -16,13 +17,13 @@
       <input type="number" id="digit3" min="0" max="9">
     </div>
 
-    <button onclick="checkCode()">Check Code</button>
+    <button onclick="checkCode()">Tjek Kode</button>
     <p id="result"></p>
-    <a href="index.html" class="back">⬅ Back</a>
+    <a href="index.html" class="back">⬅ Tilbage</a>
   </div>
 
   <script>
-    const correctCode = "472"; // ✨ set Advent 1 code here
+    const correctCode = "472"; // ✨ ændr koden her
 
     function checkCode() {
       const code =
@@ -31,10 +32,10 @@
         document.getElementById("digit3").value;
       const result = document.getElementById("result");
       if (code === correctCode) {
-        result.textContent = "✅ Correct! You may open your Cherry Red beer 🍻";
+        result.textContent = "✅ Korrekt! Du har låst op for Cherry Red Risalamande 🍻";
         result.className = "success";
       } else {
-        result.textContent = "❌ Not quite right... the malt spirits mock you!";
+        result.textContent = "❌ Forkert kode... måske mangler du en smule julestøv?";
         result.className = "fail";
       }
     }

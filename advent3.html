@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
-  <title>Advent 3 – The Silent Night Enigma</title>
+  <title>3. Advent – Stille Nacht Gåden</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="snow"></div>
   <div class="container">
-    <h1>🕯️ Advent 3 – The Stille Nacht Enigma 🎅</h1>
-    <p>Enter the 3-digit code from your third challenge.</p>
+    <h1>🕯️ 3. Advent – Stille Nacht Gåden 🎅</h1>
+    <p>Indtast din kode for at se om julen har talt sandt.</p>
 
     <div class="code-inputs">
       <input type="number" id="digit1" min="0" max="9">
@@ -16,13 +17,13 @@
       <input type="number" id="digit3" min="0" max="9">
     </div>
 
-    <button onclick="checkCode()">Check Code</button>
+    <button onclick="checkCode()">Tjek Kode</button>
     <p id="result"></p>
-    <a href="index.html" class="back">⬅ Back</a>
+    <a href="index.html" class="back">⬅ Tilbage</a>
   </div>
 
   <script>
-    const correctCode = "506"; // ✨ set Advent 3 code here
+    const correctCode = "506"; // ✨ ændr koden her
 
     function checkCode() {
       const code =
@@ -31,10 +32,10 @@
         document.getElementById("digit3").value;
       const result = document.getElementById("result");
       if (code === correctCode) {
-        result.textContent = "✅ Correct! The night grows silent... open your Stille Nacht 🍻";
+        result.textContent = "✅ Korrekt! Natten er stille... men din øl venter 🍻";
         result.className = "success";
       } else {
-        result.textContent = "❌ Nope! The bells ring with confusion...";
+        result.textContent = "❌ Forkert... måske skal du kigge mod nordstjernen?";
         result.className = "fail";
       }
     }
